@@ -1,0 +1,68 @@
+<h1 class="text-center">Welcome to {{appName}}</h1>
+<br />
+<br />
+<h1 class="text-center">Best Offers</h1>
+
+<br />
+<div class="row" class="best-offers">
+    <div *ng-for="#coupon of bestOffers">
+
+        <div class="small-coupon coupon col-6" data-store-type="Online" data-entity-name="Domino's Pizza" data-couponid="108735" data-utm-source="home_bo_1_108735">
+            <div class="small-card online-card">
+                <div class="header-content">
+                    <div class="clearfix">
+                        <div class="col-12 padding-h">
+                            <img class="ctype-icon" src="http://cdn01.coupondunia.in/resources/img/coupon-scissor.png">
+                            <span class="meta">Online</span>
+                        </div>
+                        <div class="col-12 alpha omega">
+                            <a href="http://www.coupondunia.in/dominos">
+                                <img class="brand-image" src="{{coupon.brand.logoURL}}" alt="Domino's Pizza">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="title-content trim-content padding-h">
+                    <div class="inline-block">
+                        <a class="brand-name-link" href="http://www.coupondunia.in/dominos" target="_blank">{{coupon.brand.name}}</a>
+                    </div>
+                </div>
+                <div class="coupon-content padding-h">
+                    <div class="coupon-title">
+                        <a href="http://www.coupondunia.in/dominos/buy-1-pizza-get-1-pizza-free-108735" class="online-hide-code dummy-anchor" data-coupon-link="dominos/buy-1-pizza-get-1-pizza-free-108735" data-coupon-id="108735" data-is-onetime="0">{{coupon.title}}</a>
+                    </div>
+                    <div class="meta clearfix">
+                        <div class="col-11 hits">
+                            <p>
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                                <span>{{coupon.uses}} Uses Today<span>
+                            </span></span></p>
+                        </div>
+
+                        <div class="col-13">
+                            <p class="expiry">
+                                <span class="expiry-icon flaticon-clock104"></span>
+                                <span>{{coupon.expiry}}</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="coupon-actions">
+                    <div class="clearfix">
+                        <div class="col-16 omega alpha get-code btn-coupon" data-out-url="http://www.coupondunia.in/load/108735/" data-coupon-id="108735" data-merchant="Domino's Pizza" data-coupon-url="http://www.coupondunia.in/dominos/buy-1-pizza-get-1-pizza-free-108735">
+                                        <span data-is-onetime="0">Get Code</span>
+                        </div>
+                        <div class="clearfix">
+                            <p class="more-offer">
+                                <a href="http://www.coupondunia.in/dominos">
+                                    <img class="tag-img" src="http://cdn01.coupondunia.in/resources/img/tag.png"> See All Domino's Pizza Offers
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

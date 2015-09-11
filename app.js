@@ -11,20 +11,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
-// Annotation section
-var MyAppComponent = (function () {
-    function MyAppComponent() {
-        this.name = 'Alice';
+var nameService_1 = require('nameService');
+var fetchCouponService_1 = require('fetchCouponService');
+// Navbar
+var CustomNavbarComponent = (function () {
+    function CustomNavbarComponent() {
     }
-    MyAppComponent = __decorate([
+    CustomNavbarComponent = __decorate([
         angular2_1.Component({
-            selector: 'my-app'
+            selector: 'custom-navbar'
         }),
         angular2_1.View({
-            template: '<h1>Hello {{ name }}</h1>'
+            templateUrl: 'views/navbar.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], MyAppComponent);
-    return MyAppComponent;
+    ], CustomNavbarComponent);
+    return CustomNavbarComponent;
 })();
-angular2_1.bootstrap(MyAppComponent);
+// Annotation section
+var CouponsAppComponent = (function () {
+    function CouponsAppComponent(nameService, fetchCouponsService) {
+        this.appName = nameService.getName();
+        this.bestOffers = fetchCouponsService.getBestOffers();
+    }
+    CouponsAppComponent = __decorate([
+        angular2_1.Component({
+            selector: 'coupons-app'
+        }),
+        angular2_1.View({
+            templateUrl: 'views/best_offers.html',
+            directives: [angular2_1.NgFor]
+        }), 
+        __metadata('design:paramtypes', [nameService_1.NameService, fetchCouponService_1.FetchCouponService])
+    ], CouponsAppComponent);
+    return CouponsAppComponent;
+})();
+angular2_1.bootstrap(CouponsAppComponent, [nameService_1.NameService, fetchCouponService_1.FetchCouponService]);
+angular2_1.bootstrap(CustomNavbarComponent);
