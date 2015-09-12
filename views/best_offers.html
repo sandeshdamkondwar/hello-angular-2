@@ -50,8 +50,8 @@
                 <div class="coupon-actions">
                     <div class="clearfix">
                         <div class="col-16 omega alpha get-code btn-coupon" data-out-url="http://www.coupondunia.in/load/108735/" data-coupon-id="108735" data-merchant="Domino's Pizza" data-coupon-url="http://www.coupondunia.in/dominos/buy-1-pizza-get-1-pizza-free-108735" (click)="getCode(coupon)">
-                            <span data-is-onetime="0">
-                                <span *ng-if="coupon.showCode !== true">Get Code</span>
+                            <span data-is-onetime="0" (click)="getCode(coupon)">
+                                <span *ng-if="coupon.showCode !== true" (click)="getCode(coupon)">Get Code</span>
                                 <span *ng-if="coupon.showCode === true">{{coupon.code}}</span>
                             </span>
                         </div>
