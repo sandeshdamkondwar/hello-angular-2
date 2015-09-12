@@ -34,17 +34,22 @@ var CouponsAppComponent = (function () {
         this.appName = nameService.getName();
         this.bestOffers = fetchCouponsService.getBestOffers();
     }
+    CouponsAppComponent.prototype.getCode = function (coupon) {
+        coupon.showCode = true;
+    };
     CouponsAppComponent = __decorate([
         angular2_1.Component({
-            selector: 'coupons-app'
+            selector: 'coupons-app',
         }),
         angular2_1.View({
             templateUrl: 'views/best_offers.html',
-            directives: [angular2_1.NgFor]
+            directives: [angular2_1.NgFor, angular2_1.NgIf]
         }), 
         __metadata('design:paramtypes', [nameService_1.NameService, fetchCouponService_1.FetchCouponService])
     ], CouponsAppComponent);
     return CouponsAppComponent;
 })();
+// bootstrap(CouponsAppComponent);
+// Other way of mentioning injectables
 angular2_1.bootstrap(CouponsAppComponent, [nameService_1.NameService, fetchCouponService_1.FetchCouponService]);
 angular2_1.bootstrap(CustomNavbarComponent);
