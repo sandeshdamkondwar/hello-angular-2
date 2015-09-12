@@ -24,7 +24,7 @@ export class FetchCouponService {
         title: "Flat Rs. 50 Cashback on Recharges & Bill Payments of Rs. 400",
         uses: 7980,
         expiry: "Expires on 30 Oct",
-        code: "0809COUPON";
+        code: "0809COUPON",
         brand: {
             name: "Paytm",
             logoURL: "http://cdn01-s3.coupondunia.in/sitespecific/in/stores/5bdb630721a70e11278547871fb9a2c8/logo-250x100.jpg",
@@ -34,7 +34,7 @@ export class FetchCouponService {
         title: "Clearance Sale: Flat 40%-70% Off on Men's Fashion",
         uses: 1526,
         expiry: "Expires on 21 Oct",
-        code: "CDFASHION";
+        code: "CDFASHION",
         brand: {
             name: "Snapdeal",
             logoURL: "http://cdn01-s3.coupondunia.in/sitespecific/in/stores/f2a0559479b487cd0f2f133c7a1a9fbb/logo-250x100.jpg",
